@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | 6ix9ine Hats</title>
+  <!-- Enlazar el archivo CSS externo -->
+  <link rel="stylesheet" type="text/css" href="iniciose.css">
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="perfil">
+      <label for="input-foto" style="cursor:pointer;">
+        <div id="preview-container">
+          <img id="preview-img" src="https://via.placeholder.com/40" alt="📷">
+          <div class="logo">
+            <div class="img">    
+              <img src="logo1.png" alt="Logo 6ix9ine">
+            </div>
+          </div>
+        </div>
+      </label>
+      <input type="file" id="input-foto" accept="image/*" style="display:none;">
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="69hats.html" onclick="cargarContenido('inicio.html')">Inicio</a></li>
+      <li><a href="servicio.html" onclick="cargarContenido('servicio.html')">Servicios</a></li>
+      <li><a href="#" onclick="cargarContenido('contacto.html')">Contacto</a></li>
+      <li><a href="correo.html" onclick="cargarContenido('login.html')">Iniciar sesión</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Registro</h2>
+    <form id="form-registro">
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+
+      <label for="correo">Correo electrónico:</label>
+      <input type="email" id="correo" name="correo" placeholder="Ingresa tu correo electrónico" required>
+
+      <button type="submit">Registrar</button>
+    </form>
+  </div>
+
+  <script>
+    // Función para guardar los datos de registro en localStorage
+    document.getElementById('form-registro').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evitar el comportamiento por defecto (enviar el formulario)
+
+      const nombre = document.getElementById('nombre').value;
+      const correo = document.getElementById('correo').value;
+
+      // Guardar en localStorage
+      localStorage.setItem('nombreUsuario', nombre);
+      localStorage.setItem('correoUsuario', correo);
+
+      // Redirigir al usuario a la página principal o al área de bienvenida
+      window.location.href = '69hats.html'; // Redirigir a una página de bienvenida
+    });
+  </script>
+
+</body>
+</html>
+
+
+  <footer class="footer">
+                <header>
+        <img src="logo.png" alt="Logo de 69HATS">          <p>© 2025 69HATS | TODOS LOS DERECHOS RESERVADOS</p>
+
+    </header>
+        </footer>
+
+</body>
+</html>
